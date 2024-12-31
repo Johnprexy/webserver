@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  httpd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+  nginx:
+    image: nginx:latest
+    ports:
+      - "9090:80"
